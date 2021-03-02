@@ -77,11 +77,11 @@
 
     //SOLO UN VESTIDO
     $vestidoRojo = 35000; //5
-    $vestidoRojo = $vestidoRojo -($vestidoRojo * 0.05);
+    $vestidoRojoR = $vestidoRojo -($vestidoRojo * 0.05);
     $vestidoVerde = 27850; //2
-    $vestidoVerde = $vestidoVerde -($vestidoRojo * 0.02);
+    $vestidoVerdeR = $vestidoVerde -($vestidoRojo * 0.02);
     $vestidoAmarillo = 34000; //6
-    $vestidoAmarillo = $vestidoAmarillo -($vestidoRojo * 0.06);
+    $vestidoAmarilloR = $vestidoAmarillo -($vestidoRojo * 0.06);
 
     echo($vestidoRojo); 
     echo ("<br>");
