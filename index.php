@@ -15,14 +15,14 @@
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="index.php">SHOPPING WEB</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Registro</a>
@@ -58,11 +58,15 @@
         <label for="exampleFormControlInput1" class="form-label">Ingresa tus apellidos</label>
         <input type="text" class="form-control" name="apellido" placeholder="PepitoPérez">
       </div> -->
-      <button type="button" class="btn btn-outline-primary">Vesstido Rojo: $35000---></button>
-      <button type="button" class="btn btn-outline-secondary">Vestido Verde: $27850---></button>
-      <button type="button" class="btn btn-outline-success">vestido Amarillo: $34000---></button>
+      <div style="position: relative;">
+        <button type="button" class="btn btn-outline-primary">Vesstido Rojo: $35000---></button>
+        <button type="button" class="btn btn-outline-secondary">Vestido Verde: $27850---></button>
+        <button type="button" class="btn btn-outline-success">vestido Amarillo: $34000---></button>
+      </div>
+
       <div class="col-md-12 text-center mt-4">
         <button type="submit" class="btn btn-lg btn-info" name="botonEnviar">Calcular resultados</button>
+        <a href="ejercicio3.php"><button type="button" class="btn btn-lg btn-danger">Ejercicio 3</button></a>
       </div>
     </form>
 
@@ -98,7 +102,7 @@
       <button type="button" class="btn btn-outline-dark mt-4">Vestido Rojo y Verde: $27850---></button>
       <button type="button" class="btn btn-outline-dark mt-4">vestido Rojo y Amarillo: $34000---></button>
     </div>
-    
+
 
 
     <?php if (isset($_POST["botonEnviar"])) : ?>
@@ -106,9 +110,9 @@
 
 
       //CON DOS VESTIDOS
-      $vestidoRojo = 35000; 
-      $vestidoVerde = 27850; 
-      $vestidoAmarillo = 34000; 
+      $vestidoRojo = 35000;
+      $vestidoVerde = 27850;
+      $vestidoAmarillo = 34000;
       $vestidoRojoVerde = $vestidoRojo + $vestidoVerde;
       $vestidoRojoAmarillo = $vestidoRojo + $vestidoAmarillo;
       $vestidoVerdeAmarillo = $vestidoAmarillo + $vestidoVerde;
