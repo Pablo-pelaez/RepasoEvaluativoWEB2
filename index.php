@@ -45,7 +45,7 @@
   <main class="container">
 
     <h1 class="text-center mt-5">MODA SHOPPING</h1>
-    <h2>PORDUCTOS EN INVENTARIO</h2>
+    <h2 class="mb-3">PORDUCTOS EN INVENTARIO</h2>
 
 
     <!-- formulario -->
@@ -58,40 +58,74 @@
         <label for="exampleFormControlInput1" class="form-label">Ingresa tus apellidos</label>
         <input type="text" class="form-control" name="apellido" placeholder="PepitoPérez">
       </div> -->
-      <button type="button" class="btn btn-outline-primary" name="vestidoRojo">Vesstido Rojo: $35000---></button>
-      <button type="button" class="btn btn-outline-secondary" name="vestidoVerde">Vestido Verde: $27850---></button>
-      <button type="button" class="btn btn-outline-success" name="vestidoAmarillo">vestido Amarillo: $34000---></button>
+      <button type="button" class="btn btn-outline-primary">Vesstido Rojo: $35000---></button>
+      <button type="button" class="btn btn-outline-secondary">Vestido Verde: $27850---></button>
+      <button type="button" class="btn btn-outline-success">vestido Amarillo: $34000---></button>
       <div class="col-md-12 text-center mt-4">
         <button type="submit" class="btn btn-lg btn-info" name="botonEnviar">Calcular resultados</button>
       </div>
     </form>
 
 
-<?php if(isset($_POST["botonEnviar"])) : ?>
-    <?php
+    <?php if (isset($_POST["botonEnviar"])) : ?>
+      <?php
 
+
+      //$vestidoRojo = $_POST["vestidoRojo"];
+      //$vestidoVerde = $_POST["vestidoVerde"];
+      //$vestidoAmarillo = $_POST["vestidoAmarillo"];
+
+      //SOLO UN VESTIDO
+      $vestidoRojo = 35000; //5
+      $vestidoRojoR = $vestidoRojo - ($vestidoRojo * 0.05);
+      $vestidoVerde = 27850; //2
+      $vestidoVerdeR = $vestidoVerde - ($vestidoVerde * 0.02);
+      $vestidoAmarillo = 34000; //6
+      $vestidoAmarilloR = $vestidoAmarillo - ($vestidoAmarillo * 0.06);
+
+      echo ($vestidoRojoR);
+      echo ("<br>");
+      echo ($vestidoVerdeR);
+      echo ("<br>");
+      echo ($vestidoAmarilloR);
+      echo ("<br>");
+      ?>
+
+    <?php endif; ?>
+
+    <div style="position: relative;">
+      <button type="button" class="btn btn-outline-dark mt-4">Vesstido Verde y Amarillo: $35000---></button>
+      <button type="button" class="btn btn-outline-dark mt-4">Vestido Rojo y Verde: $27850---></button>
+      <button type="button" class="btn btn-outline-dark mt-4">vestido Rojo y Amarillo: $34000---></button>
+    </div>
     
-    $vestidoRojo = $_POST["vestidoRojo"];
-    $vestidoVerde = $_POST["vestidoVerde"];
-    $vestidoAmarillo = $_POST["vestidoAmarillo"];
 
-    //SOLO UN VESTIDO
-    $vestidoRojo = 35000; //5
-    $vestidoRojoR = $vestidoRojo -($vestidoRojo * 0.05);
-    $vestidoVerde = 27850; //2
-    $vestidoVerdeR = $vestidoVerde -($vestidoRojo * 0.02);
-    $vestidoAmarillo = 34000; //6
-    $vestidoAmarilloR = $vestidoAmarillo -($vestidoRojo * 0.06);
 
-    echo($vestidoRojo); 
-    echo ("<br>");
-    echo($vestidoVerde);
-    echo ("<br>");
-    echo($vestidoAmarillo);
-    echo ("<br>");
-?>
+    <?php if (isset($_POST["botonEnviar"])) : ?>
+      <?php
 
-<?php endif; ?>
+
+      //CON DOS VESTIDOS
+      $vestidoRojo = 35000; 
+      $vestidoVerde = 27850; 
+      $vestidoAmarillo = 34000; 
+      $vestidoRojoVerde = $vestidoRojo + $vestidoVerde;
+      $vestidoRojoAmarillo = $vestidoRojo + $vestidoAmarillo;
+      $vestidoVerdeAmarillo = $vestidoAmarillo + $vestidoVerde;
+
+      $vestidoRojoVerdeR = $vestidoRojoVerde - ($vestidoRojoVerde * 0.1);
+      $vestidoRojoAmarilloR = $vestidoRojoAmarillo - ($vestidoRojoAmarillo * 0.1);
+      $vestidoVerdeAmarilloR = $vestidoVerdeAmarillo - ($vestidoVerdeAmarillo * 0.1);
+
+      echo ($vestidoRojoVerdeR);
+      echo ("<br>");
+      echo ($vestidoRojoAmarilloR);
+      echo ("<br>");
+      echo ($vestidoVerdeAmarilloR);
+      echo ("<br>");
+      ?>
+
+    <?php endif; ?>
   </main>
 
 
